@@ -52,7 +52,9 @@ void loop() {
     // display text explanation of gas level
     lcd.setCursor(0, 1);
     lcd.print("NIEBEZPIECZNY!!!");
-    delay(200);
+    // blink RED LED
+    digitalWrite(redLed, LOW);
+    delay(500);
   }
   // Checks if it has reached non-dangerous threshold value
   else if (analogSensor > sensorThres)
